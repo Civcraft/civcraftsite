@@ -1,8 +1,54 @@
----
-layout: carousel
-title: Contribute
----
-<h4>Contribute</h4>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""><meta name="author" content="">
+    <link rel="shortcut icon" href="./assets/ico/favicon.png">
+    <title>Contribute</title>
+
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/font-awesome.css" rel="stylesheet">
+    <link href="./assets/css/styling.css" rel="stylesheet">
+
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/holder.js"></script>
+    <script src="./assets/js/jquery.fitvids.js"></script>
+    <!--[if lt IE 9]>
+      <script src="./assets/assets/js/html5shiv.js"></script>
+      <script src="./assets/assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <div id="header-background-blur">
+      </div>
+      <div class="container header-container">
+        <div class="navbar-wrapper">
+          <div class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-header">
+              <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span></button>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="http://wiki.civcraft.co/doku.php?id=rules:general">rules</a></li>
+                <li><a href="contribute.html">contribute</a></li>
+                <li><a href="http://forum.civcraft.co">forum</a></li>
+                <li><a href="http://reddit.com/r/civcraft/">subreddit</a></li>
+                <li><a href="http://wiki.civcraft.co/">wiki</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a style="text-decoration:none" href="index.html"><img src="./assets/img/logo-new.png" class="layer display civlogo"></a>
+      </div>
+    </header>
+    <div class="container">
+      <h4>Contribute</h4>
 <p>So, after discovering the many ways in which civcraft is the best <s>Minecraft server</s> MMO in the world, you've decided to give back. Great!</p>
 <p>There are currently three ways you can donate money: Bitcoin, Dogecoin, and PayPal.</p>
 <div class="sidebysidemain">
@@ -21,3 +67,28 @@ title: Contribute
     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
   </div>
 </div>
+
+    </div>
+    <script>
+      $(document).ready(function() {
+        function getRandomInt(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        render = getRandomInt(1, 8);
+        $('#header-background-blur').css("background-image", "url('./assets/img/blurredrenders/" + render + ".jpg')");
+        $('header').hover(function() {
+          $('.navbar-wrapper').css("background-color", "rgba(0,0,0,0.5)");
+        }).mouseleave(function(){
+          $('.navbar-wrapper').css("background-color", "rgba(0,0,0,0)");
+        });
+        $('.reddit-header').append("<h4 class='reddit-title-custom'>Posts from <a href='http://reddit.com/r/Civcraft'>/r/Civcraft</a></h4>");
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('#video').fitVids();
+        $('.server-ip').popover();
+      });
+    </script>
+  </body>
+</html>
