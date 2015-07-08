@@ -1,56 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=""><meta name="author" content="">
-    <link rel="shortcut icon" href="./assets/ico/favicon.png">
-    <title>CivCraft</title>
-    
-    <link href="./assets/css/bootstrap.css" rel="stylesheet">
-    <link href="./assets/css/font-awesome.css" rel="stylesheet">
-    <link href="./assets/css/styling.css" rel="stylesheet">
-
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/holder.js"></script>
-    <script src="./assets/js/jquery.fitvids.js"></script>
-    <!--[if lt IE 9]>
-      <script src="./assets/assets/js/html5shiv.js"></script>
-      <script src="./assets/assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <header>
-      <div id="header-background">
-      </div>
-      <div id="header-background-blur">
-      </div>
-      <div class="container header-container">
-        <div class="navbar-wrapper">
-          <div class="navbar navbar-inverse navbar-static-top">
-            <div class="navbar-header">
-              <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span></button>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="http://wiki.civcraft.co/doku.php?id=rules:general">rules</a></li>
-                <li><a href="contribute.html">contribute</a></li>
-                <li><a href="http://forum.civcraft.co">forum</a></li>
-                <li><a href="http://reddit.com/r/civcraft/">subreddit</a></li>
-                <li><a href="http://wiki.civcraft.co/">wiki</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <a style="text-decoration:none" href="index.html"><img src="./assets/img/logo.png" class="layer display civlogo"></a>
-      </div>
-    </header>
-    <div class="container">
-      <div class="row">
+---
+layout: carousel
+title: CivCraft
+---
+<div class="row">
   <div style="@media (min-width: 768px) {float: left}" class="col-md-6">
     <h4>What is Civcraft?</h4>
     <p>Civcraft is an experiment for communities, political ideologies, debate and discussion. Our backstory is based on history, not fiction. We’re forming a new direction for game-play, not just about surviving the elements, but about surviving each other, where players can work together to create and shape civilization or to watch it crumble. A world open to any idea, manifesto or philosophy, created by the players. We hope to push minecraft to it’s fullest potential in order to foster discussion, experimentation and community building. This is the great pastime and challenge of mankind: Civilization.</p>
@@ -93,32 +45,3 @@ Before logging on, there are a few things you should probably know and do. The s
     });
   });
 </script>
-
-    </div>
-    <script>
-      $(document).ready(function() {
-        function getRandomInt(min, max) {
-          return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-        render = getRandomInt(1, 8);
-        $('#header-background').css("background-image", "url('./assets/img/renders/" + render + ".jpg')"); 
-        $('#header-background-blur').css("background-image", "url('./assets/img/blurredrenders/" + render + ".jpg')"); 
-  
-        $('header').hover(function() { 
-          $('#header-background-blur').css("opacity", "0"); 
-          $('.navbar-wrapper').css("background-color", "rgba(0,0,0,0.5)"); 
-        }).mouseleave(function(){
-          $('#header-background-blur').css("opacity", "1"); 
-          $('.navbar-wrapper').css("background-color", "rgba(0,0,0,0)"); 
-        });
-        $('.reddit-header').append("<h4 class='reddit-title-custom'>Posts from <a href='http://reddit.com/r/Civcraft'>/r/Civcraft</a></h4>");
-      });
-    </script>
-    <script>
-      $(document).ready(function() {
-        $('#video').fitVids();
-        $('.server-ip').popover();
-      });
-    </script>
-  </body>
-</html>
