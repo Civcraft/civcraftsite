@@ -517,7 +517,10 @@ h6 .small,
 }
 
 h1,
-h2,
+h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -4575,8 +4578,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 
